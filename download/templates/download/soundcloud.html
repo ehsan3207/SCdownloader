@@ -1,0 +1,66 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+
+<header>
+
+    <div class="top">
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    SoundCloud Downloader
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+
+</header>
+
+
+<div class="container">
+
+<form action="download/?format=json" method="POST">
+    {% csrf_token %}
+    <label class="input">
+        <input type="text" name="url" class="input" placeholder="        paste your link here...">
+    <button type="submit">GO</button>
+    </label>
+</form>
+</div>
+
+
+
+<footer>
+
+    <div class="footer">
+    <p style="margin-top: 35px">
+        This website is built with Django and is created for practice purposes only.
+    </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>
